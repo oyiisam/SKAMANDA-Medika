@@ -1,0 +1,138 @@
+.fade-card {
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.fade-card:hover {
+	transform: translateY(-3px);
+	box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.animate-up {
+	opacity: 0;
+	transform: translateY(20px);
+}
+
+.animate-up.visible {
+	opacity: 1;
+	transform: translateY(0);
+	transition: all 0.5s ease;
+}
+
+.legend-box {
+	display: inline-block;
+	width: 14px;
+	height: 14px;
+	border-radius: 3px;
+	margin-right: 6px;
+}
+
+.highlight-item {
+	animation: pulseHighlight 1.5s ease-out;
+	box-shadow: 0 0 0 4px rgba(0, 123, 255, 0.4) !important;
+}
+
+@keyframes pulseHighlight {
+	0% {
+		transform: scale(1);
+		opacity: 1;
+	}
+
+	50% {
+		transform: scale(1.02);
+		opacity: 1;
+	}
+
+	100% {
+		transform: scale(1);
+		opacity: 1;
+	}
+}
+
+@media (max-width: 768px) {
+	.card-body h6 {
+		font-size: 0.95rem;
+	}
+
+	.card-body small {
+		font-size: 0.8rem;
+	}
+}
+
+/* Hover-card efek lembut */
+.hover-card {
+	transition: transform 0.25s ease, box-shadow 0.25s ease;
+	border-radius: 1rem;
+	background: linear-gradient(135deg, #ffffff, #f9fbfc);
+}
+
+.hover-card:hover {
+	transform: translateY(-4px);
+	box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+/* Responsif grid spacing */
+@media (max-width: 768px) {
+	.card-body i.fs-1 {
+		font-size: 2.2rem !important;
+	}
+
+	.card-body h4,
+	.card-body h5 {
+		font-size: 1.1rem;
+	}
+}
+
+/* Card AI Insight khusus */
+.ai-insight-box {
+	border-radius: 0.75rem;
+	background: linear-gradient(135deg, #e8f8ff, #ffffff);
+	border: 1px solid #b3ecff;
+	padding: 1rem;
+	text-align: center;
+	color: #0dcaf0;
+	box-shadow: 0 2px 10px rgba(13, 202, 240, 0.15);
+}
+
+.hover-card {
+	transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.hover-card:hover {
+	transform: translateY(-4px);
+	box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+.hover-card:hover {
+	transform: translateY(-3px);
+	transition: all 0.2s ease-in-out;
+	box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+.icon-circle {
+	width: 48px;
+	height: 48px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 50%;
+}
+
+.bg-light-green {
+	background-color: #ecfdf5;
+}
+
+.table-hover tbody tr:hover {
+	background-color: #f9fafb;
+}
+
+.table tbody tr:hover {
+	background-color: var(--bs-success-light) !important;
+}
+
+.badge.bg-primary {
+	background-color: var(--bs-primary) !important;
+}
+
+.badge.bg-success {
+	background-color: var(--bs-success) !important;
+}
