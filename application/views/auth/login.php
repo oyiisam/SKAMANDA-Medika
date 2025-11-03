@@ -14,6 +14,9 @@
                     <small class="text-success">Let's unlock and start the adventure!</small>
                 </div>
 
+			<!-- Alert Flash Message -->
+                <?= $this->session->flashdata('pesan'); ?>
+
                 <form method="post">
 
                     <!-- Username -->
