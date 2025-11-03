@@ -22,6 +22,11 @@ TEKNOLOGI:
 4. UI | SNEAT Bootstrap 5 Admin Template |
 5. Library | DataTables, PhpOffice |
 
+DEMO APLIKASI
+https://skamed.smkamanahhusadabatu.sch.id/
+username : demoaplikasi
+password : demoaplikasi123
+
 M. Syamsu Hidayat
 📞 +62 821-4031-2545
 📧 samsu26.nuim@gmail.com
