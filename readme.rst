@@ -1,71 +1,27 @@
-###################
-What is CodeIgniter
-###################
+SKAMANDA Medika+
+Integrated Pharmacy & Clinical Management System for Vocational Schools
 
-CodeIgniter is an Application Development Framework - a toolkit - for people
-who build web sites using PHP. Its goal is to enable you to develop projects
-much faster than you could if you were writing code from scratch, by providing
-a rich set of libraries for commonly needed tasks, as well as a simple
-interface and logical structure to access these libraries. CodeIgniter lets
-you creatively focus on your project by minimizing the amount of code needed
-for a given task.
+Smart Health, Smarter Future — AI-Powered | © 2025
 
-*******************
-Release Information
-*******************
+SKAMANDA Medika+ merupakan platform pembelajaran terpadu untuk kompetensi keahlian kesehatan, informatika, dan vokasi. Sistem ini dirancang sebagai solusi atas kesenjangan pembelajaran praktik vokasi yang belum sepenuhnya terdigitalisasi, sekaligus menjawab kebutuhan kompetensi dunia kerja modern dan perkembangan teknologi AI.
 
-This repo contains in-development code for future releases. To download the
-latest stable release please visit the `CodeIgniter Downloads
-<https://codeigniter.com/download>`_ page.
+FITUR
+1. Dashboard | Monitoring data klinik & aktivitas |
+2. Import & Export Data | PDF, Excel (PhpOffice) |
+3. Pharmacy System | Manajemen obat, stok, resep obat |
+4. Patient Management | Registrasi pasien, riwayat kunjungan |
+5. Medical Records | Input, manajemen, dan pelacakan rekam medis |
+6. User Roles | Admin, petugas, siswa/praktikan |
+7. UI Modern | Responsive Bootstrap 5 (SNEAT Template) |
+8. AI Support | Fitur pendukung AI (experimental) |
 
-**************************
-Changelog and New Features
-**************************
+TEKNOLOGI:
+1. Framework | CodeIgniter 3 |
+2. Bahasa | PHP, JavaScript |
+3. Database | MySQL |
+4. UI | SNEAT Bootstrap 5 Admin Template |
+5. Library | DataTables, PhpOffice |
 
-You can find a list of all changes for each release in the `user
-guide change log <https://github.com/bcit-ci/CodeIgniter/blob/develop/user_guide_src/source/changelog.rst>`_.
-
-*******************
-Server Requirements
-*******************
-
-PHP version 5.6 or newer is recommended.
-
-It should work on 5.3.7 as well, but we strongly advise you NOT to run
-such old versions of PHP, because of potential security and performance
-issues, as well as missing features.
-
-************
-Installation
-************
-
-Please see the `installation section <https://codeigniter.com/userguide3/installation/index.html>`_
-of the CodeIgniter User Guide.
-
-*******
-License
-*******
-
-Please see the `license
-agreement <https://github.com/bcit-ci/CodeIgniter/blob/develop/user_guide_src/source/license.rst>`_.
-
-*********
-Resources
-*********
-
--  `User Guide <https://codeigniter.com/docs>`_
--  `Contributing Guide <https://github.com/bcit-ci/CodeIgniter/blob/develop/contributing.md>`_
--  `Language File Translations <https://github.com/bcit-ci/codeigniter3-translations>`_
--  `Community Forums <http://forum.codeigniter.com/>`_
--  `Community Wiki <https://github.com/bcit-ci/CodeIgniter/wiki>`_
--  `Community Slack Channel <https://codeigniterchat.slack.com>`_
-
-Report security issues to our `Security Panel <mailto:security@codeigniter.com>`_
-or via our `page on HackerOne <https://hackerone.com/codeigniter>`_, thank you.
-
-***************
-Acknowledgement
-***************
-
-The CodeIgniter team would like to thank EllisLab, all the
-contributors to the CodeIgniter project and you, the CodeIgniter user.
+M. Syamsu Hidayat
+📞 +62 821-4031-2545
+📧 samsu26.nuim@gmail.com
