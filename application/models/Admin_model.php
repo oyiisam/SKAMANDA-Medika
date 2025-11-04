@@ -50,6 +50,9 @@ class Admin_model extends CI_Model
         $this->db->join('jenis', 'jenis.id_jenis = barang.jenis_id', 'left');
         $this->db->join('lokasi', 'lokasi.id_lokasi = barang.lokasi_id', 'left');
         $this->db->join('satuan', 'satuan.id_satuan = barang.satuan_id', 'left');
+        $this->db->order_by('jenis.nama_jenis', 'ASC');
+        $this->db->order_by('barang.nama_barang', 'ASC');
+
 
         // Jalankan query dan kembalikan hasilnya
         $query = $this->db->get();
