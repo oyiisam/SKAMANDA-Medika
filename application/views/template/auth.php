@@ -64,7 +64,7 @@
     </head>
 
     <style>
-      /* GLOBAL BASE STYLES */
+      /* GLOBAL BASE */
       body {
         margin: 0;
         padding: 0;
@@ -79,42 +79,50 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 100vw;
-        height: 100vh;
+        width: 100%;
+        min-height: 100vh;
+        padding: clamp(12px, 3vh, 32px);
+        /* fleksibel sesuai layar */
+        position: relative;
       }
 
       .login-box::before,
       .register-box::before {
+        content: "";
+        position: absolute;
         inset: 0;
         background: rgba(0, 0, 0, 0.04);
-        /* sedikit lebih pekat */
         box-shadow:
           inset 0 0 120px rgba(0, 0, 0, 0.15),
-          /* lebih tebal & luas */
           0 0 80px rgba(0, 0, 0, 0.1);
-        /* efek luar lembut */
         z-index: -1;
       }
 
-      /* FORM CONTAINERS */
+      /* FORM CARD */
       .login-form,
       .register-form {
         background: linear-gradient(135deg, #e8f5e9, #ffffff, #f0fdf4);
         border-radius: 0.75rem;
-        padding: 3rem 2.5rem;
-        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+        padding: clamp(1.5rem, 3vw, 3rem);
+        width: 100%;
+        max-width: 450px;
+        box-shadow: 0 8px 26px rgba(0, 0, 0, 0.08);
         transition: all 0.3s ease;
       }
 
-      .login-form {
-        width: 420px;
-      }
-
+      /* REGISTER CARD SPECIAL */
       .register-form {
-        width: 900px;
+        max-width: 960px;
       }
 
-      /* FORM FIELDS & LABELS */
+      /* GRID INSIDE REGISTER */
+      .register-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 1rem 1.5rem;
+      }
+
+      /* FORM FIELDS */
       .form-floating label {
         color: #777;
       }
@@ -124,19 +132,12 @@
         box-shadow: 0 0 0 0.2rem rgba(10, 108, 77, 0.25);
       }
 
-      /* TEXT COLORS */
+      /* COLORS */
       .text-success {
         color: #0A6C4D !important;
       }
 
-      a.text-success:hover,
-      .text-success-hover:hover {
-        color: #0C7A56 !important;
-      }
-
       /* BUTTONS */
-      /* Solid Success */
-      /* === Tombol Success Brand Custom === */
       .btn-success {
         background-color: #0A6C4D !important;
         border-color: #0A6C4D !important;
@@ -146,88 +147,85 @@
 
       .btn-success:hover {
         background-color: #0C7A56 !important;
-        border-color: #0C7A56 !important;
         transform: translateY(-2px);
       }
 
-      .btn-success:focus,
-      .btn-success:active,
-      .btn-success.active,
-      .show>.btn-success.dropdown-toggle {
-        background-color: #0C7A56 !important;
-        border-color: #0C7A56 !important;
-        color: #fff !important;
-        box-shadow: 0 0 0 0.2rem rgba(10, 108, 77, 0.25) !important;
-      }
-
-
-      /* Outline Success (Universal) */
       .btn-outline-success {
         background-color: #fff !important;
         color: #0A6C4D !important;
         border-color: #0A6C4D !important;
-        transition: all 0.3s ease !important;
+        transition: all 0.3s ease;
       }
 
-      .btn-outline-success:hover,
-      .btn-outline-success:focus,
-      .btn-outline-success:active {
-        background-color: #0A6C4D !important;
-        color: #fff !important;
-        border-color: #0A6C4D !important;
-        box-shadow: 0 0 0 0.15rem rgba(10, 108, 77, 0.25) !important;
-      }
-
-      /* Spesifik untuk login & register (backup, jika override dari tema lain) */
-      .login-form .btn-outline-success,
-      .register-form .btn-outline-success {
-        background-color: #fff !important;
-        color: #0A6C4D !important;
-        border-color: #0A6C4D !important;
-      }
-
-      .login-form .btn-outline-success:hover,
-      .register-form .btn-outline-success:hover {
+      .btn-outline-success:hover {
         background-color: #0A6C4D !important;
         color: #fff !important;
       }
 
-      /* ANIMATIONS */
+      /* ANIMATION */
       .fade-in {
-        animation: fadeInUp 0.8s ease-out;
+        animation: fadeInUp 0.7s ease-out;
       }
 
-      @keyframes fadeInUp {
+      /* typewriting animation */
+      @keyframes typingReveal {
         0% {
           opacity: 0;
-          transform: translateY(40px);
+          letter-spacing: 0.3em;
         }
 
         100% {
+          opacity: 1;
+          letter-spacing: normal;
+        }
+      }
+
+      .showing-text {
+        animation: typingReveal 0.25s ease-out;
+      }
+
+      /* smooth hiding */
+      .hiding-text {
+        transition: opacity 0.15s ease-out;
+        opacity: 0;
+      }
+
+
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+
+        to {
           opacity: 1;
           transform: translateY(0);
         }
       }
 
-      /* RESPONSIVE */
-      @media (max-width: 768px) {
-        .login-form {
-          width: 90%;
-          padding: 2rem 1.5rem;
-        }
-
+      /* MEDIA RESPONSIVE */
+      @media (max-width: 992px) {
         .register-form {
-          width: 95%;
-          padding: 2rem 1.5rem;
+          padding: 2rem;
+          max-width: 90%;
         }
+      }
 
-        .row.g-3 {
-          display: block;
+      @media (max-width: 768px) {
+
+        .login-form,
+        .register-form {
+          padding: 1.8rem;
+          max-width: 94%;
         }
+      }
 
-        .col-md-6 {
-          width: 100%;
-          margin-bottom: 1rem;
+      @media (max-width: 480px) {
+
+        .login-form,
+        .register-form {
+          border-radius: 10px;
+          padding: 1.4rem;
         }
       }
     </style>
@@ -255,15 +253,43 @@
 
       <!-- Password JS -->
       <script>
-        const togglePassword = document.querySelector("#togglePassword");
-        const password = document.querySelector("#password");
-        togglePassword.addEventListener("click", function() {
-          const type = password.getAttribute("type") === "password" ? "text" : "password";
-          password.setAttribute("type", type);
-          this.querySelector("i").classList.toggle("bx-hide");
-          this.querySelector("i").classList.toggle("bx-show");
+        document.querySelectorAll(".toggle-password").forEach(toggle => {
+          toggle.addEventListener("click", () => {
+            const input = toggle.parentElement.querySelector("input");
+            const icon = toggle.querySelector("i");
+
+            // ADD ANIMATION CLASS
+            if (input.type === "password") {
+              // First hide bullet content smoothly
+              input.classList.add("hiding-text");
+
+              setTimeout(() => {
+                input.type = "text";
+                input.classList.remove("hiding-text");
+                input.classList.add("showing-text");
+
+                // remove animation class after finish
+                setTimeout(() => input.classList.remove("showing-text"), 250);
+              }, 150);
+
+            } else {
+              // hide text first then mask
+              input.classList.add("hiding-text");
+              setTimeout(() => {
+                input.type = "password";
+                input.classList.remove("hiding-text");
+              }, 150);
+            }
+
+            // Toggle icon
+            icon.classList.toggle("bx-hide");
+            icon.classList.toggle("bx-show");
+          });
         });
       </script>
+
+
+
 
       <!-- Place this tag in your head or just before your close body tag. -->
       <script async defer src="https://buttons.github.io/buttons.js"></script>
