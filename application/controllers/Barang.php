@@ -47,10 +47,6 @@ class Barang extends CI_Controller
             $this->db->where('tempat_barang', 'Klinik');
         }
 
-        // Tambahkan kondisi ORDER BY di controller sebelum mengambil data
-        $this->db->order_by('tempat_barang', 'ASC'); // Sesuaikan nama kolom dan arah urutan (ASC atau DESC)
-        $this->db->order_by('nama_barang', 'ASC'); // Sesuaikan nama kolom dan arah urutan (ASC atau DESC)
-
         // Ambil data dari tabel
         $data = $this->admin->getDataBarang($nama_tabel);
 
